@@ -9,6 +9,7 @@
 /tmp/
 *.gem
 .env
+.env.test
 .DS_Store
 
 # rspec failure tracking

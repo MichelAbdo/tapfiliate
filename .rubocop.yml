@@ -1,0 +1,44 @@
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.4.1
+  Exclude:
+    - bin/*
+    - config/**/*
+    - db/**/*
+    - vendor/**/*
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'Rakefile'
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/ModuleLength:
+  Max: 200
+
+Rails:
+  Enabled: false
+
+# Offense count: 6
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: normal, rails
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+# Offense count: 112
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: when_needed, always, never
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+
+# Offense count: 279
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
+# SupportedStyles: single_quotes, double_quotes
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  ConsistentQuotesInMultiline: true
