@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'HTTP'
+require 'http'
 require 'json'
 require 'addressable/template'
 require 'forwardable'
